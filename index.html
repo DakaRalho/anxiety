@@ -8,7 +8,7 @@
     body {
         margin: 0;
         padding: 0;
-        height: 100%;
+        height: 100vh; /* Definindo a altura da tela */
         background-color: black;
     }
 
@@ -18,12 +18,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative; /* Adicionado position: relative; */
+        position: relative;
     }
 
     .imagem {
         position: absolute;
-        top: 100px; /* Ajuste este valor para posicionar mais abaixo */
+        top: -100px; /* Começa fora da tela */
+        left: 50%; /* Centralizando horizontalmente */
+        transform: translateX(-50%); /* Centralizando horizontalmente */
         animation: cair 2s ease forwards; /* A animação dura 2 segundos */
     }
 
@@ -32,7 +34,7 @@
             top: -100px; /* Começa fora da tela */
         }
         100% {
-            top: calc(60% - 60px); /* Fica no meio do site */
+            top: 50%; /* Fica no meio do site */
         }
     }
 </style>
