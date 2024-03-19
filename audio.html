@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Áudio e GIF</title>
+</head>
+<body>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('audio_service_worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registrado com sucesso:', registration);
+                })
+                .catch(function(error) {
+                    console.error('Erro ao registrar Service Worker:', error);
+                });
+        }
+
+        let serviceWorker = navigator.serviceWorker.controller;
+
+        if (serviceWorker) {
+            serviceWorker.postMessage('start');
+        }
+    </script>
+</body>
+</html>
