@@ -1,12 +1,12 @@
 let context = null;
 
-self.onmessage = function(e) {
+self.addEventListener('message', function(e) {
     if (e.data === 'start') {
         startAudio();
     } else if (e.data === 'stop') {
         stopAudio();
     }
-};
+});
 
 function startAudio() {
     context = new AudioContext();
