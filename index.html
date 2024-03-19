@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="Daka jones" content="width=device-width, initial-scale=1.0">
-    <title>Pagina foda</title>
-    <style>
-    
-
-	body, html {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animacao de Imagem</title>
+<style>
+    body, html {
         margin: 0;
         padding: 0;
         height: 100%;
@@ -24,8 +22,8 @@
 
     .imagem {
         position: absolute;
-        top: -100px; /* Inicia fora da tela */
-        animation: cair 1s ease forwards; /* A animação dura 2 segundos */
+        top: 100px; /* Ajuste este valor para posicionar mais abaixo */
+        animation: cair 2s ease forwards; /* A animação dura 2 segundos */
     }
 
     @keyframes cair {
@@ -36,35 +34,11 @@
             top: calc(50% - 50px); /* Fica no meio do site */
         }
     }
-
-
-
-	    
-    </style>
+</style>
 </head>
 <body>
-    <header>
-        <h1>Pagina FODAAAAA</h1>
-        <p>Hello mundo fudido.</p>
-    </header>
-    <nav>
-        <ul>
-
-        </ul>
-    </nav>
-	
-	
-	<section>
-	
-<div class="container">
-        <img src="Caixa.jpg" alt="caixa" class="imagem" width="200" height="200">
-</div>
-	
-
-	
-	</section>
-	
-	
-	
+    <div class="container">
+        <img src="sua_imagem.jpg" alt="Imagem" class="imagem" width="200" height="200">
+    </div>
 </body>
 </html>
