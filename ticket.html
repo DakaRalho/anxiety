@@ -8,16 +8,37 @@
     body {
         margin: 0;
         padding: 0;
-        height: 100vh; /* Definindo a altura da tela */
+        height: 100vh;
         background-color: black;
     }
 
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .imagem {
+        position: absolute;
+        top: 50%; /* Começa no centro vertical */
+        left: 50%; /* Começa no centro horizontal */
+        transform: translate(-50%, -50%) scale(0.5); /* Começa pequena e no centro */
+        transition: transform 0.5s ease; /* Adiciona transição para suavizar o crescimento */
+        cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    }
+
+    .imagem:hover {
+        transform: translate(-50%, -50%) scale(1.2); /* Aumenta a escala quando passa o mouse */
+    }
 </style>
 </head>
 <body>
     <div class="container">
         <a href="pagina_destino.html"> <!-- Link para a página destino -->
-            <img src="Caixa.jpg" alt="Imagem" class="imagem" width="200" height="200">
+            <img src="imagem.jpg" alt="Imagem" class="imagem" width="200" height="200">
         </a>
     </div>
 </body>
