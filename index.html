@@ -5,7 +5,41 @@
     <meta name="Daka jones" content="width=device-width, initial-scale=1.0">
     <title>Pagina foda</title>
     <style>
+    
 
+	body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .imagem {
+        position: absolute;
+        top: -100px; /* Inicia fora da tela */
+        animation: cair 2s ease forwards; /* A animação dura 2 segundos */
+    }
+
+    @keyframes cair {
+        0% {
+            top: -100px; /* Começa fora da tela */
+        }
+        100% {
+            top: calc(50% - 50px); /* Fica no meio do site */
+        }
+    }
+
+
+
+	    
     </style>
 </head>
 <body>
@@ -22,7 +56,9 @@
 	
 	<section>
 	
-	
+<div class="container">
+        <img src="sua_imagem.jpg" alt="Imagem" class="imagem">
+</div>
 	
 
 	
