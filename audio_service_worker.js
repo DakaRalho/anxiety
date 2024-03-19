@@ -13,6 +13,4 @@ function startAudio() {
     audio.play();
 }
 
-function stopAudio() {
-    audio.pause();
 }
