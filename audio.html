@@ -6,42 +6,10 @@
 <title>Áudio e GIF</title>
 </head>
 <body>
-    <audio id="audio" autoplay loop>
-        <source src="Kim_Dracula_Make_Me_Famous_Official_Audio_MP3_160K.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <button id="playButton">Play</button>
-
-    <script>
-        const audio = document.getElementById('audio');
-        const playButton = document.getElementById('playButton');
-
-        playButton.addEventListener('click', function() {
-            if (audio.paused) {
-                audio.play();
-                playButton.textContent = 'Pause';
-            } else {
-                audio.pause();
-                playButton.textContent = 'Play';
-            }
-        });
-
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('audio_service_worker.js')
-                .then(function(registration) {
-                    console.log('Service Worker registrado com sucesso:', registration);
-                })
-                .catch(function(error) {
-                    console.error('Erro ao registrar Service Worker:', error);
-                });
-        }
-
-        let serviceWorker = navigator.serviceWorker.controller;
-
-        if (serviceWorker) {
-            serviceWorker.postMessage('start');
-        }
-    </script>
+    <audio controls>
+	<source src="/assets_tutorials/media/Loreena_Mckennitt_Snow_56bit.mp3" type="audio/mpeg">
+	<source src="/assets_tutorials/media/Loreena_Mckennitt_Snow_56bit.ogg" type="audio/ogg">
+	Seu navegador não suporta áudio tag.
+</audio>
 </body>
 </html>
